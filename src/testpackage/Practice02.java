@@ -24,7 +24,7 @@ public class Practice02 {
 
         //課題2（IntStream使用：1～10までを足して出力　IntStreamを使用して1行におさめる
         System.out.println("【課題2+】1~10までを加算して出力 IntStreamを使い1行におさめる");
-        int sum2 = IntStream.of(1,2,3,4,5,6,7,8,9,10).sum();
+        int sum2 = IntStream.rangeClosed(1, 10).sum();      //Stream 生成メソッド rangeClosed を使った。sum() は終端操作メソッド。
         System.out.println(sum2);
         System.out.println();
 
