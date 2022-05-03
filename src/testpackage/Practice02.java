@@ -1,8 +1,9 @@
+import java.util.stream.IntStream;     //課題2+で使用
 import java.time.LocalDateTime;     //課題3で使用
-import java.util.List;          //課題5で使用
-import java.util.ArrayList;     //課題5で使用
-import java.util.Map;           //課題5で使用
-import java.util.HashMap;       //課題5で使用
+import java.util.List;              //課題5で使用
+import java.util.ArrayList;         //課題5で使用
+import java.util.Map;               //課題5で使用
+import java.util.HashMap;           //課題5で使用
 
 public class Practice02 {
     public static void main(String[] args) {
@@ -21,11 +22,17 @@ public class Practice02 {
         System.out.println(sum);
         System.out.println();
 
+        //課題2（IntStream使用：1～10までを足して出力　IntStreamを使用して1行におさめる
+        System.out.println("【課題2+】1~10までを加算して出力 IntStreamを使い1行におさめる");
+        int sum2 = IntStream.of(1,2,3,4,5,6,7,8,9,10).sum();
+        System.out.println(sum2);
+        System.out.println();
+
         //課題3：3年後の今日の曜日
         System.out.println("【課題3】3年後の今日の曜日を出力する");
         LocalDateTime today = LocalDateTime.now();
-        LocalDateTime TYL = LocalDateTime.of(today.getYear() + 3, today.getMonth(), today.getDayOfMonth(), 0, 0);   //Three Years Later.
-        System.out.println(TYL.getDayOfWeek());
+        LocalDateTime tyl = LocalDateTime.of(today.getYear() + 3, today.getMonth(), today.getDayOfMonth(), 0, 0);   //Three Years Later.
+        System.out.println(tyl.getDayOfWeek());
         System.out.println();
 
         //課題4：引数が0なら偽　1なら真　と出力する
